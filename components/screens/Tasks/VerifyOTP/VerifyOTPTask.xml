@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name = "VerifyOTPTask" extends = "Task" >
+  <interface>
+    <field id = "url" type="string"/> 
+    <field id = "deviceId" type = "string" />
+    <field id = "preAuthSessionId" type = "string" />
+    <field id = "userInputCode" type="string"/>
+
+    <field id = "userId" type = "string" />
+    <field id = "accessToken" type = "string" />
+    <field id = "refreshToken" type="string"/>
+
+  </interface>
+  <script type="text/brightscript" uri="pkg:/components/screens/Tasks/VerifyOTP/VerifyOTPTask.brs"/>
+</component>

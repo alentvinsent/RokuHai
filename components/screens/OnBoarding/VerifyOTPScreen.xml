@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="VerifyOTPScreen"
+    extends="Group"
+>
+    <script type="text/brightscript" uri="pkg:/components/screens/OnBoarding/VerifyOTPScreen.brs" />
+
+    <children>
+        <Rectangle
+            translation="[0,30]">
+            <Label
+                id="otp_title"
+                text="Enter OTP"
+                width="400"
+                height="20"
+                vertAlign="center"
+                horizAlign="center"
+                color="0xFFFFFF"
+                translation="[440,40]"
+            />
+            <Label
+                id="otp_description"
+                text="Enter the OTP sent to +91 9876543210"
+                width="500"
+                height="30"
+                vertAlign="center"
+                horizAlign="center"
+                color="0xFFFFFF"
+                translation="[390,62]"
+            />
+            <Rectangle
+                id=""
+                width="350"
+                height="50"
+                translation="[465,102]"
+                color="#111010"
+            >
+                <Rectangle
+                    id=""
+                    width="50"
+                    height="50"
+                    color="#555555"
+                    translation="[0,0]"
+                >
+                    <Label
+                        id="col_1"
+                        text=""
+                        width="50"
+                        height="50"
+                        vertAlign="center"
+                        horizAlign="center"
+                    />
+                </Rectangle>
+
+                <Rectangle
+                    id=""
+                    width="50"
+                    height="50"
+                    color="#555555"
+                    translation="[60,0]"
+                >
+                    <Label
+                        id="col_2"
+                        text=""
+                        width="50"
+                        height="50"
+                        vertAlign="center"
+                        horizAlign="center"
+                    />
+                </Rectangle>
+
+                <Rectangle
+                    id=""
+                    width="50"
+                    height="50"
+                    color="#555555"
+                    translation="[120,0]"
+                >
+                    <Label
+                        id="col_3"
+                        text=""
+                        width="50"
+                        height="50"
+                        vertAlign="center"
+                        horizAlign="center"
+                    />
+                </Rectangle>
+
+                <Rectangle
+                    id=""
+                    width="50"
+                    height="50"
+                    color="#555555"
+                    translation="[180,0]"
+                >
+                    <Label
+                        id="col_4"
+                        text=""
+                        width="50"
+                        height="50"
+                        vertAlign="center"
+                        horizAlign="center"
+                    />
+                </Rectangle>
+
+                <Rectangle
+                    id=""
+                    width="50"
+                    height="50"
+                    color="#555555"
+                    translation="[240,0]"
+                >
+                    <Label
+                        id="col_5"
+                        text=""
+                        width="50"
+                        height="50"
+                        vertAlign="center"
+                        horizAlign="center"
+                    />
+                </Rectangle>
+
+                <Rectangle
+                    id=""
+                    width="50"
+                    height="50"
+                    color="#555555"
+                    translation="[300,0]"
+                >
+                    <Label
+                    id="col_6"
+                        text=""
+                        width="50"
+                        height="50"
+                        vertAlign="center"
+                        horizAlign="center"
+                    />
+                </Rectangle>
+
+            </Rectangle>
+
+
+            <Rectangle
+                width="300"
+                height="30"
+                translation="[490,172]"
+                color="#111010"
+            >
+
+                <Poster
+                    uri="pkg:/images/msg_img.png"
+                    width="11"
+                    height="11"
+                    translation="[35,9]"
+                />
+                <Label
+                    id="resend_otp"
+                    text="Resend OTP"
+                    width="300"
+                    height="30"
+                    vertAlign="center"
+                    horizAlign="left"
+                    color="0xFFFFFF"
+                    translation="[50,0]"
+                />
+
+                <Poster
+                    uri="pkg:/images/circle_img.png"
+                    width="11"
+                    height="11"
+                    translation="[135,9]"
+                />
+                <Label
+                    id="change_mb_no"
+                    text="Change Mobile Number"
+                    width="300"
+                    height="30"
+                    vertAlign="center"
+                    horizAlign="right"
+                    color="0xFFFFFF"
+                    translation="[-32,0]"
+                />
+            </Rectangle>
+
+            <Rectangle
+                id="validate_otp_rect"
+                width="300"
+                height="30"
+                translation="[490,215]"
+            >
+                <Label
+                    id="validate_otp"
+                    text="Validate OTP"
+                    width="300"
+                    height="30"
+                    vertAlign="center"
+                    horizAlign="center"
+                    color="0xFFFFFF"
+                />
+
+            </Rectangle>
+
+            <Keyboard
+                id="keyboard"
+                visible="true"
+                translation="[160,270]"
+                layoutType="numberpad"
+            />
+        </Rectangle>
+    </children>
+</component>

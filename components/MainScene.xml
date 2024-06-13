@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MainScene" extends="Scene" initialFocus="QRPhoneNoLoginScreen">
+  <script type="text/brightscript" uri="pkg:/components/MainScene.brs" />
+  <children>
+    <QRPhoneNoLoginScreen
+      id="QRPhoneNoLoginScreen"
+      visible="true"
+      translation="[0,0]"/>
+      
+      <VerifyOTPScreen
+      id="VerifyOTPScreen"
+      visible="false"
+      translation="[0,0]"/>
+  </children>
+</component>

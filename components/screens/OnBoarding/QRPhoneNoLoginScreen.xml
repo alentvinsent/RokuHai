@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="QRPhoneNoLoginScreen"
+    extends="Group"
+>
+    <script type="text/brightscript" uri="pkg:/components/screens/OnBoarding/QRPhoneNoLoginScreen.brs" />
+    <children>
+        <Rectangle
+            id="active_tv_rect"
+            width="1280"
+            height="60"
+            color="#0e0f0e">
+            <Label
+                id="heading"
+                text="Activate TV"
+                width="1280"
+                height="60"
+                horizAlign="center"
+                vertAlign="center"
+            />
+
+        </Rectangle>
+
+        <Rectangle
+            id="content_rect"
+            width="1280"
+            height="640"
+            color="#0e0f0e"
+            translation="[0,100]"
+        >
+
+            <MiniKeyboard
+                id="keyboard"
+                visible="false"
+                translation="[150,80]"
+                layoutType="numberpad"
+            />
+
+            <Rectangle
+                id="qr_code_view"
+                color="#0e0f0e"
+                width="500"
+                height="600"
+                translation="[100,0]"
+            >
+
+                <Label
+                    id="qr_title"
+                    text="Scan QR Code to Activate"
+                    width="500"
+                    height="20"
+                    horizAlign="center"
+                    translation="[0,25]"
+                />
+
+                <Label
+                    id="qr_description"
+                    text="Open the camera app on your mobile to scan code and continue to login"
+                    maxLines="2"
+                    width="255"
+                    height="80"
+                    horizAlign="center"
+                    color="#e8e8e9"
+                    wrap="true"
+                    translation="[130,90]"
+                />
+
+                <Poster
+                    id="qr_code"
+                    uri="pkg:/images/qr_code.png"
+                    width="270"
+                    height="220"
+                    translation="[120,160]" />
+
+                <Label
+                    id="link"
+                    text="Go to https://hoichoi.tv/settngs/devices &amp; enter the code below to activate TV"
+                    width="300"
+                    height="80"
+                    color="#e8e8e9"
+                    horizAlign="center"
+                    wrap="true"
+                    translation="[110,420]"
+                />
+
+                <Poster
+                    id="otp"
+                    uri="pkg:/images/otp.png"
+                    width="210"
+                    height="50"
+                    translation="[155,500]" />
+
+            </Rectangle>
+
+            <Rectangle
+                width="80"
+                height="480"
+                translation="[600,-50]"
+                color="#0e0f0e">
+                <Poster
+                    id="vert_line"
+                    uri="pkg:/images/vertical_line.png"
+                    width="2"
+                    height="480"
+                    translation="[39,80]" />
+            </Rectangle>
+
+            <Rectangle
+                id="ph_no_view"
+                color="#0e0f0e"
+                width="500"
+                height="240"
+                translation="[660,170]">
+                <Label
+                    id="ph_title"
+                    text="Activate Device with Mobile Number"
+                    width="500"
+                    height="20"
+                    horizAlign="center"
+                    translation="[0,0]"
+                />
+                <Label
+                    id="ph_description"
+                    text="Enter the mobile number registered with hoichoi"
+                    width="500"
+                    height="20"
+                    color="#e8e8e9"
+                    horizAlign="center"
+                    translation="[0,20]"
+                />
+
+                <Rectangle
+                    id="country_code_rect"
+                    width="70"
+                    height="30"
+                    color="#1e1e1e"
+                    translation="[50,70]"
+                >
+                    <Poster
+                        id="india"
+                        uri="pkg:/images/india.jpg"
+                        width="15"
+                        height="10"
+                        translation="[12,10]" />
+                    <Label
+                        id="country_code"
+                        width="70"
+                        height="30"
+                        vertAlign="center"
+                        horizAlign="center"
+                        color="0xFFFFFF"
+                        text="+91"
+                        translation="[5,2]"
+                    />
+                    <Poster
+                        id="arrow_down"
+                        uri="pkg:/images/arrow_down.png"
+                        width="8"
+                        height="8"
+                        translation="[52,10]" />
+
+                </Rectangle>
+
+                <TextEditBox
+                    id="no_input"
+                    width="320"
+                    height="35"
+                    hintText="Enter 10 digit Mobile No"
+                    translation="[130,67]" />
+
+                <Rectangle
+                    id="get_otp_rect"
+                    width="400"
+                    height="35"
+                    color="#1e1e1e"
+                    translation="[50,120]"
+                >
+
+                    <Label
+                        id="get_otp_lbl"
+                        text="Get OTP"
+                        width="400"
+                        height="35"
+                        vertAlign="center"
+                        horizAlign="center"
+                        color="0xFFFFFF"
+                    />
+                </Rectangle>
+
+            </Rectangle>
+        </Rectangle>
+    </children>
+</component>
