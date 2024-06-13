@@ -1,61 +1,19 @@
 function init()
-    m.timer = CreateObject("roSGNode", "Timer")
-    m.timer.duration = 10 * 1000  ' 10 seconds
-    m.timer.control = "start"
-    m.timer.ObserveField("fire", "onTimerFire")
-     ' Start the first API call
-     MakePostRequestToGetActivationCode()
+    print "init() - - - - - - - - - > START"
 
+    timer = m.top.findNode("exampleTimer")
+    timer.ObserveField("fire", "onTimerFire")
+    timer.control = "start"
+    ' Start the first API call
     setUpUI()
 end function
 
 ' Function to handle timer fire event
 sub onTimerFire()
-    MakePostRequestToGetActivationCode()
+    m.getActivationCodeTask = createObject("roSGNode", "GetActivationCodeTask")
+    m.getActivationCodeTask.control = "RUN"
 end sub
 
-' Function to make the API call
-function MakePostRequestToGetActivationCode()
-    print "MakePostRequestToGetActivationCode() - - - - - - - - - > START"
-    data = {
-        "deviceId":"134"
-    }
-    body = FormatJSON(data)
-    port = CreateObject("roMessagePort")
-    request = CreateObject("roUrlTransfer")
-    request.SetMessagePort(port)
-    request.SetCertificatesFile("common:/certs/ca-bundle.crt")
-    request.RetainBodyOnError(true)
-    request.AddHeader("Content-Type", "application/json")
-    request.SetRequest("POST") ' Change the request method to POST
-    request.SetUrl("https://uat-api.hoichoi.dev/core/api/v1/user-device/generate-activation-code") ' Set the URL
-    requestSent = request.AsyncPostFromString(body) ' Send the JSON body in the request
-    if (requestSent)
-        msg = wait(0, port)
-        if (type(msg) = "roUrlEvent")
-            statusCode = msg.GetResponseCode()
-
-            headers = msg.GetResponseHeaders()
-            etag = headers["Etag"]
-            body = msg.GetString()
-            json = ParseJSON(body)
-            print json
-
-            ? "before code [0🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳0🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳🥳]"
-            if statusCode = 200
-                
-
-            end if
-
-            if statusCode = 503
-                'unhide when server not available
-                '
-            end if
-
-        end if
-    end if
-    print "MakePostRequestToGetActivationCode() - - - - - - - - - > END"
-end function
 
 sub setUpUI()
     m.top.backgroundColor = "#0e0f0e"

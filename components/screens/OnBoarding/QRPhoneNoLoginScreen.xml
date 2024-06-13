@@ -4,6 +4,10 @@
 >
     <script type="text/brightscript" uri="pkg:/components/screens/OnBoarding/QRPhoneNoLoginScreen.brs" />
     <children>
+        <Timer
+      id="exampleTimer"
+      repeat="true"
+      duration="5" />
         <Rectangle
             id="active_tv_rect"
             width="1280"
