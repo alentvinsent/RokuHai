@@ -3,7 +3,9 @@ sub Main()
     m.port = CreateObject("roMessagePort")
     screen.setMessagePort(m.port)
 
-    scene = screen.CreateScene("MainScene")
+    ' scene = screen.CreateScene("MainScene")
+    scene = screen.CreateScene("VideoExample")
+    
     screen.show()
 
     while(true)
